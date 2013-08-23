@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="restjaxb">
+	    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+	    <class>com.ghassan.model.City</class>
+		<class>com.ghassan.model.Orphan</class>
+		<class>com.ghassan.model.Sector</class>
+		<class>com.ghassan.model.Sponsor</class>
+		<class>com.ghassan.model.Sponsorship</class>
+		<class>com.ghassan.model.Town</class>
+		<properties>
+      <property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/daraasponsor"/>
+      <property name="javax.persistence.jdbc.password" value="0012300"/>
+      <property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+      <property name="javax.persistence.jdbc.user" value="root"/>
+    </properties>
+		
+	</persistence-unit>
+</persistence>

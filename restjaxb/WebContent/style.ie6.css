@@ -1,0 +1,328 @@
+/* begin Page */
+
+/* Created by Artisteer v3.1.0.46558 */
+
+#gl-page-background-glare{
+   display: none;
+}
+.cleared {
+   width:1px;
+}
+/* Start Box */
+.gl-box, .gl-box-body {
+   zoom:1;
+}
+/* End Box */
+/* Start Bar */
+.gl-bar{
+   zoom:1;
+}
+/* End Bar */
+/* end Page */
+
+/* begin Header */
+.gl-header {
+   zoom:expression(runtimeStyle.zoom=1,insertBefore(document.createElement('div'),firstChild).className='gl-header-png',insertBefore(document.createElement('div'),firstChild).className='gl-header-jpeg');
+   z-index: 1;
+}
+
+.gl-header-png
+{
+   position: absolute;
+   z-index:-2;
+   top: 0;
+   width:100%;
+   height: 226px;
+   background-image: url('images/header.png');
+   background-repeat: no-repeat;
+   background-position:top center;
+}
+
+.gl-header-jpeg
+{
+   position: absolute;
+   z-index:-1;
+   top: 0;
+   width:expression(parentNode.clientWidth - 2 * 6 + 'px');
+   left:6px;
+   height: 226px;
+   background-image: url('images/header.jpg');
+   background-repeat: no-repeat;
+   background-position: center center;
+}
+/* end Header */
+
+/* begin HeaderObject */
+div.gl-headerobject{
+   font-size: 1px;
+}
+/* end HeaderObject */
+
+/* begin Menu */
+ul.gl-hmenu, ul.gl-hmenu ul, ul.gl-hmenu li, ul.gl-hmenu a {
+   zoom:1;
+}
+.gl-hmenu li.gl-hmenuhover{
+   z-index: 10000;
+}
+.gl-hmenu .gl-hmenuhoverUL{
+   visibility: visible;
+   top: 100%;
+   left: 0;
+}
+.gl-hmenu .gl-hmenuhoverUL .gl-hmenuhoverUL{
+   top: 0;
+   left: 100%;
+}
+.gl-hmenu ul li {
+   float: left !important;
+   clear: both;
+   width: 100%;
+}
+.gl-nav
+{
+   zoom: 1;
+   height: 36px;
+   background:#FBC737;
+}
+
+/* end Menu */
+
+/* begin MenuItem */
+.gl-hmenu a 
+{
+   display:inline-block;
+   color: #735502;
+   padding: 0 22px;
+   line-height: 26px;
+   text-align: center;
+}
+
+.gl-hmenu a.active 
+{
+   color: #FEEEC3;
+   background-color:#1A6993;
+}
+
+.gl-hmenu a:hover, .gl-hmenuhoverA,  .gl-hmenuhover a 
+{
+   color: #CADFED;
+   background-color:#3D84B3;
+}
+
+/* end MenuItem */
+
+/* begin MenuSeparator */
+ul.gl-hmenu li {
+   margin-left:expression(this.previousSibling==null?'0':'4px');
+}
+ul.gl-hmenu li li{
+   margin-left:0;
+}
+
+/* end MenuSeparator */
+
+/* begin MenuSubItem */
+.gl-hmenu ul a 
+{
+   color: #413001 !important;
+   float: left;
+}
+
+.gl-hmenu ul a:hover, .gl-hmenu ul .gl-hmenuhover .gl-hmenuhoverA 
+{
+   color: #000000 !important;
+   background-position: left bottom;
+   border-top-width: 0 !important;
+}
+
+/* end MenuSubItem */
+
+/* begin Box, Sheet */
+.gl-sheet {
+   background:#FBC737;
+}
+/* end Box, Sheet */
+
+/* begin Layout */
+.gl-content-layout, .gl-content-layout-row, .gl-layout-cell 
+{
+   display: block;
+   zoom: 1;
+}
+.gl-layout-cell
+{
+   position:relative;
+   float: left;
+   clear: right;
+}
+/* end Layout */
+
+/* begin Box, Block, VMenuBlock */
+.gl-vmenublock {
+   background:#FBC737;
+}
+/* end Box, Block, VMenuBlock */
+
+/* begin Box, Box, VMenuBlockContent */
+.gl-vmenublockcontent {
+   background:#FBC737;
+}
+
+/* end Box, Box, VMenuBlockContent */
+
+/* begin VMenuItem */
+ul.gl-vmenu, ul.gl-vmenu ul, ul.gl-vmenu li, ul.gl-vmenu a
+{
+   position:relative;
+   zoom: 1;
+}
+
+ul.gl-vmenu li {
+   z-index:0;
+   margin-top:expression(this.previousSibling==null?'0':'1px');
+}
+ul.gl-vmenu ul{
+   margin-top:1px;
+   padding-bottom: 0;
+}
+
+ul.gl-vmenu a 
+{
+   color: #8C6703;
+   background-color:#FBC737;
+   padding: 0 10px 0 10px;
+   height: 32px;
+   line-height: 32px;
+}
+
+.gl-vmenu a.active 
+{
+   color: #1C72A0;
+   background-color:#FBC737;
+}
+
+ul.gl-vmenu a:hover
+{
+   color: #1A384C;
+   background-color:#589AC6;
+}
+
+/* end VMenuItem */
+
+/* begin VMenuSubItem */
+ul.gl-vmenu ul a {
+   color: #8C6703 !important;
+}
+ul.gl-vmenu li li {
+   padding-top:expression(this.previousSibling==null?'0':'0');
+   margin-top:expression(this.previousSibling==null?'0':'1px');
+}
+ 
+ul.gl-vmenu ul ul {
+   margin-top:1px;
+}
+ul.gl-vmenu ul a.active {
+   color: #124A68 !important;
+}
+ul.gl-vmenu ul a:hover {
+   color: #4B3702 !important;
+}	
+/* end VMenuSubItem */
+
+/* begin Box, Block */
+.gl-block {
+   background:#FBC737;
+}
+/* end Box, Block */
+
+/* begin BlockHeader */
+.gl-blockheader {
+   background:#3D84B3;
+}
+/* end BlockHeader */
+
+/* begin Box, BlockContent */
+.gl-blockcontent {
+   background:#FBC737;
+}
+.gl-blockcontent-body ul li{
+   height: 1%;
+}
+
+/* end Box, BlockContent */
+
+/* begin Button */
+.gl-button-wrapper{
+   zoom: 1;
+}
+.gl-button-wrapper .gl-button-l, .gl-button-wrapper .gl-button-r {
+   display: none;
+}
+.gl-button-wrapper .gl-button {
+   float: left;
+}
+/* end Button */
+
+/* begin Box, Post */
+.gl-post {
+   background:#FBD057;
+}
+/* end Box, Post */
+
+/* begin PostMetadata, PostMetadataHeader */
+.gl-postmetadataheader
+{
+   zoom:1;
+   background:#FBD66E;
+}
+/* end PostMetadata, PostMetadataHeader */
+
+/* begin PostBullets */
+.gl-post ul li, .gl-post ol ul li
+{
+   height: 1%;
+   padding-left: 13px;
+   /* makes "ul li" not to align behind the image if they are in the same line */
+  overflow-x: visible;
+   overflow-y: hidden;
+}
+
+.gl-post ul ol li
+{
+   background: none;
+   padding-left: 0;
+   /* overrides overflow for "ul li" and sets the default value */
+  overflow: visible;
+}
+/* end PostBullets */
+
+/* begin Footer */
+.gl-footer-body{
+   padding-right: 0;
+   zoom:1;
+}
+.gl-footer{
+   zoom:1;
+   background:#FCD66E;
+}
+
+.gl-footer-text
+{
+   height: 32px;
+}
+
+.gl-rss-tag-icon
+{
+   zoom: 1;
+   font-size: 1px;
+}
+
+/* end Footer */
+
+/* begin LayoutCell, content */
+.gl-content {
+   width: auto;
+}
+/* end LayoutCell, content */
+

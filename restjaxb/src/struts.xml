@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.action.extension" value="html" />
+	<constant name="struts.custom.i18n.resources" value="global" />
+	<constant name="struts.convention.classes.reload" value="true" />
+	<constant name="struts.action.excludePattern" value="/rest/*" />
+
+	<package name="gl" extends="struts-default,json-default"
+		namespace="/">
+	</package>
+	<package name="user" namespace="/user" extends="gl">
+		<action name="Login">
+			<result>login.jsp</result>
+		</action>
+		<action name="Welcome" class="com.ghassan.struts.WelcomeUserAction">
+			<result name="SUCCESS">welcome_user.jsp</result>
+		</action>
+		<action name="Welcome2" class="com.ghassan.struts.Welcome2">
+			<result name="SUCCESS">welcome_user.jsp</result>
+			<result name="input">login.jsp</result>
+		</action>
+	</package>
+
+	<package name="model" namespace="/model" extends="gl">
+		<action name="orphan" class="com.ghassan.struts.model.OrphanByID">
+			<result name="SUCCESS">orphanmodel.jsp</result>
+		</action>
+		<action name="udlist" class="com.ghassan.struts.model.UpDownList">
+			<result name="success">updownlist.jsp</result>
+		</action>
+	</package>
+
+	<package name="control" namespace="/control" extends="gl">
+		<action name="loop" class="com.ghassan.struts.control.MyIterator">
+			<result name="success">orphanlist.jsp</result>
+		</action>
+
+	</package>
+
+</struts>
